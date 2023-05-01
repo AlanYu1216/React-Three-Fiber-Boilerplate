@@ -73,13 +73,14 @@ export default function App() {
     }
   })
   return (
-    <Canvas camera={{ position: [0, 0, 2], far: 100000 }} gl={{ logarithmicDepthBuffer: true }}>
+    <Canvas camera={{ position: [0, 0, 2], fov:60, far: 1000, near: 0.1 }} gl={{ logarithmicDepthBuffer: true }}>
       <Environment
         // preset="sunset"
         files="./img/industrial_sunset_02_1k.hdr"
         blur={0.7}
         background
       />
+      <orthographicCamera/>
       <ambientLight intensity={0.2} color={0xffffff} />
       <pointLight position={[5, 3, 5]} color={0xffffff} rotateY={Math.PI/2}/>
       <Model />

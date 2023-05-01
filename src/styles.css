@@ -33,3 +33,11 @@ body,
   transition: opacity 1s linear;
   opacity: 0;
 }
+
+
+#panel {
+  position: fixed;
+  background-color: rgb(148, 89, 46);
+  color:aliceblue;
+  top: 20px;
+}
